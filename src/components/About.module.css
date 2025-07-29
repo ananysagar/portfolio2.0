@@ -1,0 +1,155 @@
+.about {
+  padding: 8rem 2rem;
+  background: rgba(14, 14, 16, 0.5);
+}
+
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #F5F7F8;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.sectionLine {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD803, #14FFEC);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aboutParagraph {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #E3E3E3;
+  opacity: 0.9;
+}
+
+.skillsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skillsTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #F5F7F8;
+  margin-bottom: 1rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.skillItem {
+  background: rgba(255, 216, 3, 0.1);
+  border: 1px solid rgba(255, 216, 3, 0.2);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  color: #E3E3E3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skillItem:hover {
+  background: rgba(255, 216, 3, 0.15);
+  border-color: #FFD803;
+  transform: translateY(-2px);
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.statItem {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.statItem:hover {
+  background: rgba(255, 216, 3, 0.05);
+  border-color: rgba(255, 216, 3, 0.2);
+  transform: translateY(-4px);
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFD803 0%, #14FFEC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: #E3E3E3;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1rem;
+  }
+  
+  .aboutContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  
+  .statsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .statItem {
+    padding: 1.5rem;
+  }
+  
+  .statNumber {
+    font-size: 2.5rem;
+  }
+} 

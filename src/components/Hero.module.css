@@ -1,0 +1,144 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.heroContainer {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.greeting {
+  color: #FFD803;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.name {
+  background: linear-gradient(135deg, #FFD803 0%, #14FFEC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+.role {
+  color: #F5F7F8;
+  display: block;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #E3E3E3;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.ctaContainer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #FFD803 0%, #FFB800 100%);
+  color: #0E0E10;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 20px rgba(255, 216, 3, 0.2);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #E3E3E3;
+  border: 2px solid #FFD803;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.secondaryButton:hover {
+  background: #FFD803;
+  color: #0E0E10;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scrollDot {
+  width: 8px;
+  height: 8px;
+  background: #FFD803;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 1rem;
+    min-height: 90vh;
+  }
+  
+  .ctaContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+} 
