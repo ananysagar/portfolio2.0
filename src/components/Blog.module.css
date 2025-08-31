@@ -58,6 +58,13 @@
   overflow: hidden;
 }
 
+.blogImageContent {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .imagePlaceholder {
   width: 100%;
   height: 100%;
@@ -98,10 +105,19 @@
 }
 
 .blogDate,
-.blogReadTime {
+.blogReadTime,
+.blogPlatform {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+.blogPlatform {
+  color: #FFD803;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .blogTitle {

@@ -13,17 +13,22 @@ interface BlogPost {
   readTime: string;
   category: string;
   image: string;
+  url: string;
+  platform: string;
 }
 
+// Replace these with your actual blog posts from external platforms
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "Building Modern Web Applications with Next.js 15",
-    excerpt: "Explore the latest features in Next.js 15 and learn how to build scalable, performant web applications with the new App Router and server components.",
-    date: "Dec 15, 2024",
-    readTime: "8 min read",
+    title: "15 Proven Guidelines for Scalable React Component Architecture",
+    excerpt: "Learn 15 best practices for building clean, scalable, and maintainable React components. A quick guide to writing better React code.",
+    date: "August 31, 2025",
+    readTime: "9 min read",
     category: "Development",
-    image: "/api/placeholder/400/250"
+    image: "/images/react-best-practices.png",
+    url: "https://dev.to/ananysagar/15-proven-guidelines-for-scalable-react-component-architecture-3l6g",
+    platform: "DEV.TO"
   },
   {
     id: 2,
@@ -32,7 +37,9 @@ const blogPosts: BlogPost[] = [
     date: "Dec 10, 2024",
     readTime: "6 min read",
     category: "Design",
-    image: "/api/placeholder/400/250"
+    image: "/api/placeholder/400/250",
+    url: "https://dev.to/yourusername/the-art-of-micro-interactions-in-web-design",
+    platform: "Dev.to"
   },
   {
     id: 3,
@@ -41,13 +48,19 @@ const blogPosts: BlogPost[] = [
     date: "Dec 5, 2024",
     readTime: "10 min read",
     category: "Development",
-    image: "/api/placeholder/400/250"
+    image: "/api/placeholder/400/250",
+    url: "https://hashnode.com/@yourusername/typescript-best-practices-for-react-developers",
+    platform: "Hashnode"
   }
 ];
 
 export default function Blog() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const handleBlogClick = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="blog" className={styles.blog} ref={ref}>
@@ -71,11 +84,20 @@ export default function Blog() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
+              onClick={() => handleBlogClick(post.url)}
             >
               <div className={styles.blogImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Blog {post.id}</span>
-                </div>
+                {post.image && post.image !== "/api/placeholder/400/250" ? (
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className={styles.blogImageContent}
+                  />
+                ) : (
+                  <div className={styles.imagePlaceholder}>
+                    <span>{post.platform}</span>
+                  </div>
+                )}
                 <div className={styles.blogCategory}>
                   {post.category}
                 </div>
@@ -98,7 +120,7 @@ export default function Blog() {
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Read More →
+                  Read on {post.platform} →
                 </motion.button>
               </div>
             </motion.article>
@@ -118,6 +140,7 @@ export default function Blog() {
               boxShadow: '0 10px 30px rgba(255, 216, 3, 0.3)'
             }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => window.open('https://medium.com/@yourusername', '_blank', 'noopener,noreferrer')}
           >
             View All Articles
           </motion.button>
