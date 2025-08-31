@@ -78,6 +78,9 @@
   color: #E3E3E3;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .skillItem:hover {

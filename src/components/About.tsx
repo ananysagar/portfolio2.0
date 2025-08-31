@@ -13,11 +13,17 @@ export default function About() {
     "React",
     "Next.js",
     "TypeScript",
-    "Node.js",
-    "Framer Motion",
+    "GraphQL",
+    "Github",
+    "AWS Appsync",
+    "AWS S3/EC2",
+    "DynamoDB",
+    "AWS Cognito",
     "CSS Modules",
-    "Tailwind CSS",
-    "Figma",
+    "Material UI",
+    "NodeJS",
+    "MongoDB",
+    "Prisma",
   ];
 
   return (
