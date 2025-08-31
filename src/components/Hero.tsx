@@ -47,8 +47,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             I craft digital experiences that blend creativity with technology. 
-            Specializing in modern web development, interactive design, and 
-            user-centered solutions.
+            Passionate about clean code, stunning designs and seamless user experiences.
           </motion.p>
           
           <motion.div

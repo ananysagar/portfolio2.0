@@ -1,17 +1,23 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import styles from './About.module.css';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import styles from "./About.module.css";
 
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skills = [
-    'React', 'Next.js', 'TypeScript', 'Node.js', 
-    'Framer Motion', 'CSS Modules', 'Tailwind CSS', 'Figma'
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Framer Motion",
+    "CSS Modules",
+    "Tailwind CSS",
+    "Figma",
   ];
 
   return (
@@ -35,23 +41,24 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className={styles.aboutParagraph}>
-              I'm a passionate creative developer with a love for crafting 
-              beautiful, functional, and user-centered digital experiences. 
-              With over 5 years of experience in web development, I specialize 
-              in modern frontend technologies and interactive design.
+              I'm a passionate Frontend developer with a love for crafting
+              beautiful, functional, and user-centered digital experiences. With
+              over 5 years of experience in web development, I specialize in
+              modern frontend technologies and interactive design.
             </p>
-            
+
             <p className={styles.aboutParagraph}>
-              My approach combines technical expertise with creative problem-solving, 
-              ensuring that every project not only meets functional requirements 
-              but also delivers an exceptional user experience. I believe in 
-              clean code, thoughtful design, and continuous learning.
+              My approach combines technical expertise with creative
+              problem-solving, ensuring that every project not only meets
+              functional requirements but also delivers an exceptional user
+              experience. I believe in clean code, thoughtful design, and
+              continuous learning.
             </p>
-            
+
             <p className={styles.aboutParagraph}>
-              When I'm not coding, you'll find me exploring new technologies, 
-              contributing to open-source projects, or sharing knowledge with 
-              the developer community.
+              My goal is to bridge the gap between design and development,
+              creating seamless user experiences that are both visually stunning
+              and highly functional.
             </p>
           </motion.div>
 
@@ -70,7 +77,7 @@ export default function About() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, color: '#FFD803' }}
+                  whileHover={{ scale: 1.05, color: "#FFD803" }}
                 >
                   {skill}
                 </motion.div>
@@ -96,7 +103,7 @@ export default function About() {
             </motion.div>
             <div className={styles.statLabel}>Projects Completed</div>
           </div>
-          
+
           <div className={styles.statItem}>
             <motion.div
               className={styles.statNumber}
@@ -108,7 +115,7 @@ export default function About() {
             </motion.div>
             <div className={styles.statLabel}>Years Experience</div>
           </div>
-          
+
           <div className={styles.statItem}>
             <motion.div
               className={styles.statNumber}
@@ -124,4 +131,4 @@ export default function About() {
       </div>
     </section>
   );
-} 
+}
